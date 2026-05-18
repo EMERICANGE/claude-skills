@@ -9,7 +9,11 @@ Collection de plugins (skills) pour Claude Code. Chaque plugin s'installe dans `
 | Plugin | Description | Commande |
 |--------|-------------|----------|
 | [ai-software-governance](./ai-software-governance/) | Audit de gouvernance logicielle complet (28 phases) — architecture, securite, qualite, DevOps, Docker, K8s, CI/CD, observabilite, FinOps. Delivre un verdict GO / NO GO Production. | `/audit` |
+| [devsecops-platform](./devsecops-platform/) | Ingenieur Platform et DevSecOps senior. Automatisation IaC, durcissement conteneurs, orchestration Kubernetes, pipelines CI/CD securises et optimisation FinOps. | — |
 | [interactive-functional-tester](./interactive-functional-tester/) | Test fonctionnel interactif pas-a-pas. Orchestre des environnements Docker a la volee, execute les tests un par un avec validation utilisateur, et corrige le code en cas d'echec. | `/start-tests` |
+| [mcp-builder](./mcp-builder/) | Ingenieur IA specialise dans l'extension des capacites de Claude via MCP. Cree des serveurs MCP performants, des outils personnalises et des architectures d'agents. | — |
+| [spring-enterprise](./spring-enterprise/) | Architecte et Tech Lead expert Spring Boot moderne — architectures d'entreprise distribuees, DDD, Clean/Hexagonal et performances. | — |
+| [startup-cto](./startup-cto/) | CTO de startup et cofondateur technique virtuel. Arbitre entre vitesse d'execution, choix d'architecture, maitrise des couts et vision produit (MVP). | — |
 
 ---
 
@@ -49,16 +53,22 @@ Consultez le README de chaque plugin pour l'installation manuelle et le depannag
 ```
 Claude Skill Library/
 ├── ai-software-governance/
-│   ├── package.json
-│   ├── install.sh / install.ps1 / install.bat
-│   ├── README.md
-│   └── skills/ai-software-governance/SKILL.md
+├── devsecops-platform/
 ├── interactive-functional-tester/
-│   ├── package.json
-│   ├── install.sh / install.ps1 / install.bat
-│   ├── README.md
-│   └── skills/interactive-functional-tester/SKILL.md
+├── mcp-builder/
+├── spring-enterprise/
+├── startup-cto/
 └── README.md
+```
+
+Chaque plugin suit la meme structure :
+
+```
+<plugin>/
+├── package.json
+├── install.sh / install.ps1 / install.bat
+├── README.md
+└── skills/<plugin>/SKILL.md
 ```
 
 ---
