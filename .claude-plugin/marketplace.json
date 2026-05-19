@@ -1,0 +1,30 @@
+{
+  "name": "claude-skills",
+  "owner": {
+    "name": "EMERICANGE",
+    "url": "https://github.com/EMERICANGE"
+  },
+  "metadata": {
+    "description": "Custom skills for software governance, testing, architecture, DevOps, MCP, and cloud optimization",
+    "version": "1.0.0",
+    "repository": "https://github.com/EMERICANGE/claude-skills"
+  },
+  "plugins": [
+    {
+      "name": "claude-skills",
+      "description": "9 skills: software governance audit, functional testing, Spring architecture, DevSecOps, MCP builder, startup CTO, evolution architect, cloud budget optimizer, project brain saver",
+      "source": "./",
+      "skills": [
+        "./skills/ai-software-governance",
+        "./skills/interactive-functional-tester",
+        "./skills/spring-enterprise",
+        "./skills/devsecops-platform",
+        "./skills/mcp-builder",
+        "./skills/startup-cto",
+        "./skills/evolution-architect",
+        "./skills/cloud-budget-optimizer",
+        "./skills/project-brain-saver"
+      ]
+    }
+  ]
+}
