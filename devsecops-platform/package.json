@@ -1,5 +1,0 @@
-{
-  "name": "devsecops-platform",
-  "version": "1.0.0",
-  "description": "Ingenieur Platform et DevSecOps senior. Automatisation des infrastructures (IaC), durcissement des conteneurs, orchestration Kubernetes, pipelines CI/CD securises et optimisation FinOps."
-}

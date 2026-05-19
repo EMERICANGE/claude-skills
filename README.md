@@ -1,77 +1,72 @@
-# Claude Skill Library
+# Claude Skills — Custom Marketplace
 
-Collection de plugins (skills) pour Claude Code. Chaque plugin s'installe dans `~/.claude/plugins/` et ajoute des capacites specialisees a Claude Code.
+Collection de skills personnalises pour Claude Code, distribuee en tant que marketplace GitHub.
 
----
+## Skills disponibles
 
-## Plugins disponibles
+| Skill | Commande | Description |
+|-------|----------|-------------|
+| `ai-software-governance` | `/audit` | Audit 28 phases → verdict GO/NO GO Production |
+| `interactive-functional-tester` | `/start-tests` | Tests fonctionnels interactifs pas-a-pas avec Docker |
+| `spring-enterprise` | `/spring-expert` | Architecte Spring Boot / DDD / Hexagonal |
+| `devsecops-platform` | `/devops-deploy` | Platform Engineer / K8s / CI/CD / FinOps |
+| `mcp-builder` | `/mcp-build` | Createur de serveurs MCP pour Claude |
+| `startup-cto` | `/cto-vision` | CTO virtuel / cadrage MVP / budgetisation |
+| `evolution-architect` | `/propose-evolution` | Propositions d'ameliorations + implementation + audit |
+| `cloud-budget-optimizer` | `/budget-optimize` | Comparatif VPS/PaaS/Serverless avec couts estimes |
 
-| Plugin | Description | Commande |
-|--------|-------------|----------|
-| [ai-software-governance](./ai-software-governance/) | Audit de gouvernance logicielle complet (28 phases) — architecture, securite, qualite, DevOps, Docker, K8s, CI/CD, observabilite, FinOps. Delivre un verdict GO / NO GO Production. | `/audit` |
-| [devsecops-platform](./devsecops-platform/) | Ingenieur Platform et DevSecOps senior. Automatisation IaC, durcissement conteneurs, orchestration Kubernetes, pipelines CI/CD securises et optimisation FinOps. | — |
-| [interactive-functional-tester](./interactive-functional-tester/) | Test fonctionnel interactif pas-a-pas. Orchestre des environnements Docker a la volee, execute les tests un par un avec validation utilisateur, et corrige le code en cas d'echec. | `/start-tests` |
-| [mcp-builder](./mcp-builder/) | Ingenieur IA specialise dans l'extension des capacites de Claude via MCP. Cree des serveurs MCP performants, des outils personnalises et des architectures d'agents. | — |
-| [spring-enterprise](./spring-enterprise/) | Architecte et Tech Lead expert Spring Boot moderne — architectures d'entreprise distribuees, DDD, Clean/Hexagonal et performances. | — |
-| [startup-cto](./startup-cto/) | CTO de startup et cofondateur technique virtuel. Arbitre entre vitesse d'execution, choix d'architecture, maitrise des couts et vision produit (MVP). | — |
+## Installation
 
----
+### Methode 1 — Via Claude Code (recommandee)
 
-## Installation rapide
-
-### Linux / macOS
-
-```bash
-cd <plugin>
-chmod +x install.sh
-./install.sh
+```
+/plugin marketplace add EMERICANGE/claude-skills
+/plugin install claude-skills
 ```
 
-### Windows
+### Methode 2 — Manuelle
 
-```powershell
-cd <plugin>
-powershell -ExecutionPolicy Bypass -File .\install.ps1
+Ajoutez dans `~/.claude/settings.json` :
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "claude-skills": {
+      "source": {
+        "source": "github",
+        "repo": "EMERICANGE/claude-skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "claude-skills@claude-skills": true
+  }
+}
 ```
 
-Ou double-cliquez sur `install.bat`.
-
-Consultez le README de chaque plugin pour l'installation manuelle et le depannage.
-
----
+Puis redemarrez Claude Code.
 
 ## Prerequis
 
-- **Claude Code** installe et fonctionnel (CLI, Desktop, ou IDE extension)
-- **Claude Opus** recommande pour les analyses approfondies (contexte 1M tokens)
-- **Docker** requis pour le plugin interactive-functional-tester
-
----
+- **Claude Code** installe et fonctionnel
+- **Claude Opus** recommande (contexte 1M tokens)
+- **Docker** requis pour `interactive-functional-tester`
 
 ## Structure
 
 ```
-Claude Skill Library/
-├── ai-software-governance/
-├── devsecops-platform/
-├── interactive-functional-tester/
-├── mcp-builder/
-├── spring-enterprise/
-├── startup-cto/
+claude-skills/
+├── skills/
+│   ├── ai-software-governance/SKILL.md
+│   ├── cloud-budget-optimizer/SKILL.md
+│   ├── devsecops-platform/SKILL.md
+│   ├── evolution-architect/SKILL.md
+│   ├── interactive-functional-tester/SKILL.md
+│   ├── mcp-builder/SKILL.md
+│   ├── spring-enterprise/SKILL.md
+│   └── startup-cto/SKILL.md
 └── README.md
 ```
-
-Chaque plugin suit la meme structure :
-
-```
-<plugin>/
-├── package.json
-├── install.sh / install.ps1 / install.bat
-├── README.md
-└── skills/<plugin>/SKILL.md
-```
-
----
 
 ## Licence
 

@@ -1,5 +1,0 @@
-{
-  "name": "interactive-functional-tester",
-  "version": "1.0.0",
-  "description": "Assistant de test fonctionnel interactif pas-a-pas. Orchestre de vrais environnements Docker a la volee par cas de test pour economiser la memoire et collabore en temps reel avec l'utilisateur."
-}
