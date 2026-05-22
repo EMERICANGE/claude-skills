@@ -15,6 +15,9 @@ Collection de skills personnalises pour Claude Code, distribuee en tant que mark
 | `evolution-architect` | `/propose-evolution` | Propositions d'ameliorations argumentees + implementation + audit |
 | `cloud-budget-optimizer` | `/budget-optimize` | Comparatif VPS / PaaS / Serverless avec couts estimes |
 | `project-brain-saver` | `/save-memory` `/resume` `/status` | Sauvegarde/reprise de session — memoire contextuelle persistante |
+| `autonomous-task-loop` | `/loop-until-done` | Agent iteratif — boucle jusqu'a completion du CDC |
+| `ui-experience-designer` | `/ui-design` | Expert UI/UX — analyse stack, propose concepts, implemente |
+| `squad-software-factory` | `/launch-squads` | Usine multi-squads (PO, Dev, Review, QA, User, Doc) |
 
 ---
 
@@ -207,7 +210,10 @@ claude-skills/
 │   ├── mcp-builder/SKILL.md
 │   ├── project-brain-saver/SKILL.md
 │   ├── spring-enterprise/SKILL.md
-│   └── startup-cto/SKILL.md
+│   ├── startup-cto/SKILL.md
+│   ├── autonomous-task-loop/SKILL.md
+│   ├── ui-experience-designer/SKILL.md
+│   └── squad-software-factory/SKILL.md
 └── README.md
 ```
 
