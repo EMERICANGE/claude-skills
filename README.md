@@ -18,6 +18,7 @@ Collection de skills personnalises pour Claude Code, distribuee en tant que mark
 | `autonomous-task-loop` | `/loop-until-done` | Agent iteratif — boucle jusqu'a completion du CDC |
 | `ui-experience-designer` | `/ui-design` | Expert UI/UX — analyse stack, propose concepts, implemente |
 | `squad-software-factory` | `/launch-squads` | Usine multi-squads (PO, Dev, Review, QA, User, Doc) |
+| `productization-engine` | `/go-product` | Industrialisation Go-To-Market — 14 etapes vers un SaaS commercialisable |
 
 ---
 
@@ -213,7 +214,8 @@ claude-skills/
 │   ├── startup-cto/SKILL.md
 │   ├── autonomous-task-loop/SKILL.md
 │   ├── ui-experience-designer/SKILL.md
-│   └── squad-software-factory/SKILL.md
+│   ├── squad-software-factory/SKILL.md
+│   └── productization-engine/SKILL.md
 └── README.md
 ```
 
