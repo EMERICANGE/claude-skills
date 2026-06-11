@@ -23,7 +23,8 @@
         "./skills/startup-cto",
         "./skills/evolution-architect",
         "./skills/cloud-budget-optimizer",
-        "./skills/project-brain-saver"
+        "./skills/project-brain-saver",
+        "./skills/codebase-documenter"
       ]
     }
   ]
